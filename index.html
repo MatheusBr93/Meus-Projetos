@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="javascript.js"></script>
+    <title>Trabalho Final</title>
+</head>
+<body>
+    <script>
+        var cabeçalhoElemento = document.createElement("h1");
+        cabeçalhoElemento.textContent = "Campeão do Mundial de LOL 2023";
+        cabeçalhoElemento.style.color = "black";
+        cabeçalhoElemento.style.padding = "20px";
+        cabeçalhoElemento.style.textAlign = "center";
+        cabeçalhoElemento.style.fontSize = "40px";
+        cabeçalhoElemento.style.fontFamily = "garamond";
+        document.body.appendChild(cabeçalhoElemento);
+        cabeçalhoElemento.body.appendChild(imagemleao);
+    </script>
+    <script>
+        var imagemleao = document.createElement("img");
+        imagemleao.alt = "Imagem do Cabeçalho";
+        imagemleao.style.width = "100px";
+        imagemleao.style.height = "auto";
+        imagemleao.style.position = "absolute"; 
+        imagemleao.style.top = "20px"; 
+        imagemleao.style.left = "10px";
+        imagemleao.src= "logo.jpg";
+        imagemleao.onclick = playAudio;
+        imagemleao.setAttribute('data-audio', 'leao.mp3'); 
+        document.body.appendChild(imagemleao);
+    </script>
+    <script>
+        var audio1 = document.createElement('audio');
+        audio1.id = 'audio';
+        audio1.preload = 'auto';
+        var source1 = document.createElement('source');
+        source1.src = "leao.mp3";
+        source1.type = 'audio/mp3';
+        audio1.appendChild(source1);
+        document.body.appendChild(imagemleao);
+        document.body.appendChild(audio1);
+    </script>
+    <script>
+        var imagemchat = document.createElement('img');
+        imagemchat.src = "logochat.png";
+        imagemchat.alt = 'Imagem no canto inferior direito';
+        imagemchat.id = 'imagem-canto';
+        imagemchat.onclick = playAudio2;
+        imagemchat.setAttribute('data-audio', 'somchat.mp3');
+        document.body.appendChild(imagemchat);
+    </script>
+    <script>
+        var audio2 = document.createElement('audio2');
+        audio2.id = "audio2";
+        audio2.preload = "auto";
+        var source2 = documento.createElement('source');
+        source2.src = 'somchat.mp3';
+        source2.type = 'audio/mp3';
+        audio2.appendChild(source2);
+        document.body.appendChild(audio2);
+        document.body.appendChild(imagemchat);
+    </script>
+    <div id="containerImagens">
+        <img id="imagem1" src = "faker.jpg"  alt="Imagem 1" class="imagem1" style="width: 300px;   height: 300px;">
+        <img id="imagem2" src = "laranja.jpg" alt="Imagem 2" class="imagem2" style="width: 250px;   height: 500px;">
+        <img id="imagem3" src = "cinza.jpg" alt="Imagem 3" class="imagem3" style="width: 500px; left: 0%; top: 30%; height: 400px;">
+    
+    </div>
+    <script>
+        var containerImagens = document.getElementById("containerImagens");
+        containerImagens.style.gap = "0px";   
+        containerImagens.style.position = "center";
+        
+    </script>
+    <style>
+        #imagem-canto {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px; 
+            height: auto; 
+            margin: 0%;
+            padding: 0%;
+    }
+        #textoPequeno {
+            position: center;
+            top: 80%;
+            left: 63%;
+            color: black;
+            text-align: center;
+            width: 300px;
+            height: 180px;
+            overflow: hidden;
+    }
+        
+        #textoSobreposto {
+            position: absolute;
+            top: 300px;
+            left: 63%;
+            transform: translate(-50%, -50%);
+            color: black;
+            text-align: center;
+        }
+        #containerImagens {
+            justify-content: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 420px; 
+        }
+        
+        .imagem1 {
+            position: absolute;
+            top: 20px;
+            width: 600px;
+            left: 150px;
+            transform: translateX(50%); 
+            transform: translateZ(10%);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem2{
+            position: center;
+            top: 200px;
+            left: 80%;
+            transform: translateX(50%);
+            z-index: -1;
+        }
+        .imagem3{
+            z-index: -2;
+        }
+        button {
+      background-color:white; /* Cor de fundo do botão */
+      color: black; /* Cor do texto do botão */
+      padding: 10px 15px; /* Espaçamento interno do botão */
+      border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+      cursor: pointer; /* Adiciona um cursor indicando que é clicável */
+      transition: background-color 0.3s ease;
+      position: absolute;
+      top: 200px;
+      left: 100px; 
+    }
+    </style>
+    <div id="textoSobreposto">
+        <h1>Conhecido como o melhor</h1>
+    <div id="textoPequeno">
+        <p>Pela quarta vez em sua carreira, Faker, é campeão do mundial de League of Legends 2023.
+        </p>
+    </div>
+    <div>
+        <button id="botao" class="botao" onclick="mostrarTexto()">Saiba Mais</button>
+        <p id="textoOculto"> Feito por Matheus do Nascimento Rodrigues.</p>
+    </div>
+    <audio id="audio" preload="auto">
+        <source src="Áudio de leão rugindo alto, rugido de leão (mp3cut.net).mp3" type="audio/mp3">
+    <audio id="audio2" preload="auto">
+        <source src="somchat.mp3" type="audio/mp3">
+    </audio>
+        
+
+</body>
+</html>
